@@ -1,0 +1,93 @@
+-- FD Command
+RegisterCommand("fd", function(source, args, rawCommand)
+    local ped = PlayerPedId()
+    local veh = GetVehiclePedIsIn(ped, false)
+
+    -- Engine
+    if args[(1)] == "engine" and args[(2)] == "station" then
+        SetVehicleExtra(veh, 1, 0)
+        SetVehicleExtra(veh, 2, 1)
+        SetVehicleExtra(veh, 3, 0)
+        SetVehicleExtra(veh, 4, 0)
+        SetVehicleExtra(veh, 5, 1)
+        SetVehicleExtra(veh, 6, 1)
+        SetVehicleExtra(veh, 7, 0)
+        SetVehicleExtra(veh, 8, 0)
+        SetVehicleExtra(veh, 9, 0)
+        SetVehicleExtra(veh, 10, 0)
+        SetVehicleExtra(veh, 11, 1)
+        SetVehicleExtra(veh, 12, 1)
+    end
+    if args[(1)] == "engine" and args[(2)] == "scene" then
+        SetVehicleExtra(veh, 1, 1)
+        SetVehicleExtra(veh, 2, 0)
+        SetVehicleExtra(veh, 3, 0)
+        SetVehicleExtra(veh, 4, 0)
+        SetVehicleExtra(veh, 5, 1)
+        SetVehicleExtra(veh, 6, 0)
+        SetVehicleExtra(veh, 7, 1)
+        SetVehicleExtra(veh, 8, 0)
+        SetVehicleExtra(veh, 9, 0)
+        SetVehicleExtra(veh, 10, 0)
+        SetVehicleExtra(veh, 11, 1)
+        SetVehicleExtra(veh, 12, 0)
+    end
+    -- Rescue
+    if args[(1)] == "rescue" and args[(2)] == "station" then
+        SetVehicleExtra(veh, 1, 0)
+        SetVehicleExtra(veh, 2, 1)
+        SetVehicleExtra(veh, 3, 0)
+        SetVehicleExtra(veh, 4, 0)
+        SetVehicleExtra(veh, 5, 1)
+        SetVehicleExtra(veh, 6, 0)
+        SetVehicleExtra(veh, 7, 0)
+        SetVehicleExtra(veh, 8, 1)
+        SetVehicleExtra(veh, 9, 0)
+        SetVehicleExtra(veh, 10, 1)
+        SetVehicleExtra(veh, 11, 0)
+        SetVehicleExtra(veh, 12, 1)
+    end
+    if args[(1)] == "rescue" and args[(2)] == "scene" then
+        SetVehicleExtra(veh, 1, 1)
+        SetVehicleExtra(veh, 2, 0)
+        SetVehicleExtra(veh, 3, 0)
+        SetVehicleExtra(veh, 4, 1)
+        SetVehicleExtra(veh, 5, 1)
+        SetVehicleExtra(veh, 6, 0)
+        SetVehicleExtra(veh, 7, 1)
+        SetVehicleExtra(veh, 8, 0)
+        SetVehicleExtra(veh, 9, 1)
+        SetVehicleExtra(veh, 10, 0)
+        SetVehicleExtra(veh, 11, 1)
+        SetVehicleExtra(veh, 12, 0)
+    end 
+        -- Tower
+    if args[(1)] == "tower" and args[(2)] == "station" then
+        SetVehicleExtra(veh, 1, 0)
+        SetVehicleExtra(veh, 2, 1)
+        SetVehicleExtra(veh, 3, 0)
+        SetVehicleExtra(veh, 4, 1)
+        SetVehicleExtra(veh, 5, 1)
+        SetVehicleExtra(veh, 6, 0)
+        SetVehicleExtra(veh, 7, 0)
+        SetVehicleExtra(veh, 8, 0)
+        SetVehicleExtra(veh, 9, 0)
+        SetVehicleExtra(veh, 10, 1)
+        SetVehicleExtra(veh, 11, 1)
+        SetVehicleExtra(veh, 12, 1)
+    end 
+    if args[(1)] == "tower" and args[(2)] == "scene" then
+        SetVehicleExtra(veh, 1, 1)
+        SetVehicleExtra(veh, 2, 0)
+        SetVehicleExtra(veh, 3, 1)
+        SetVehicleExtra(veh, 4, 0)
+        SetVehicleExtra(veh, 5, 0)
+        SetVehicleExtra(veh, 6, 0)
+        SetVehicleExtra(veh, 7, 0)
+        SetVehicleExtra(veh, 8, 1)
+        SetVehicleExtra(veh, 9, 1)
+        SetVehicleExtra(veh, 10, 0)
+        SetVehicleExtra(veh, 11, 1)
+        SetVehicleExtra(veh, 12, 0)
+    end
+end, false)
